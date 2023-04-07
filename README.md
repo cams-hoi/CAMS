@@ -1,6 +1,6 @@
 # CAMS
 
-This is a PyTorch implementation of [CAMS website](https://cams-hoi.github.io). 
+This is a PyTorch implementation of [CAMS](https://cams-hoi.github.io). 
 
 ### Environment
 
@@ -60,7 +60,3 @@ sh eval/run.sh [1] [2]
 # [1] = final results path, eg. experiments/pliers/synth
 # [2] = name of the file saving evaluation result, eg. eval.txt
 ```
-
-# Website License
-
-TBD

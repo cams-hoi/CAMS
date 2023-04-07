@@ -1,0 +1,22 @@
+name: hoi
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - matplotlib
+  - numpy
+  - scikit-learn
+  - tensorboardx
+  - tqdm
+  - docopt
+  - pandas
+  - joblib
+  - librosa
+  - pip
+  - easydict
+  - pyyaml
+  - importlib_metadata
+  - trimesh
+  # - pip:
+  #   - transforms3d
+# conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch

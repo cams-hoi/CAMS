@@ -1,0 +1,50 @@
+model:
+    type: CAMS_CVAE
+    kwargs:
+        shape_feature_dim: 32
+        control_dim: 102
+        condition_dim: 32
+        latent_dim: 64
+        temporal_dim: 6
+        in_seq_dim: 160
+        out_seq_dim: 160
+        input_obj_dim: 3
+        ref_dim: 35
+        seq_len: 10
+        n_stages: 3
+        n_parts: 2
+
+solver:
+    type: Solver
+
+optim:
+    type: AdamW
+    kwargs:
+        lr: 1.0e-4
+
+lr_scheduler:
+    type: noam_learning_rate_decay
+    kwargs:
+        warmup_steps: 1
+        minimum: 1.0e-4
+
+seed: 9527
+batch_size: 64
+max_epoch: 1000
+save_gap_epoch: 100
+validation_log_gap: 100
+print_freq_iter: 10
+
+max_grad_clip: 5
+max_grad_norm: 100
+
+data:
+    type: HOI4D
+    sample_num: 1000
+    seq_len: 10
+    n_stages: 3
+    n_parts: 2
+    path:
+        train: /home/qingyuan/CAMS/data/list/pliers_list_train.txt
+        test: /home/qingyuan/CAMS/data/list/pliers_list_test.txt
+        meta_root: data/meta/pliers_meta.torch
